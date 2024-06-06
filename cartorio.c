@@ -115,9 +115,22 @@ int main()
 {
 	int opcao=0; //definindo variáveis
 	int laco=1;
+	char senhadigitada[]="a";
+	int comparacao;
 	
-	for (laco=1;laco=1;)
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador!\n\nDigite sua senha: ");
+	scanf("%s", senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)	
 	{
+	
+	
+	    system ("cls");
+    	for (laco=1;laco=1;)
+	   {
 	    setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	    
 	    system ("cls");
@@ -130,34 +143,43 @@ int main()
     	printf("\t4 - Sair do sistema\n\n");
 	    printf("Opção:"); //fim do menu
 	
-	scanf("%d",&opcao); //armazenando a escolha do usuário
+    	scanf("%d",&opcao); //armazenando a escolha do usuário
 	
-	system("cls"); // responsável por limpar a tela
+	    system("cls"); // responsável por limpar a tela
 	
-	switch(opcao) //inicio de seleção do menu
- {
- 	case 1:
+	    switch(opcao) //inicio de seleção do menu
+	
+	
+    {
+    	case 1:
  		registro(); // chamada de funções
  		break;
  		
- 	case 2:
+    	  case 2:
  		consulta();
  		break;
  	
- 	case 3:
+    	case 3:
  		deletar();
  		break;
  		
- 	case 4:
-	 printf("Obrigada por utilizar o sistema!\n");
-	 return 0;
-	 break;	
+    	case 4:
+    	 printf("Obrigada por utilizar o sistema!\n");
+    	 return 0;
+    	 break;	
  		
  		
- 	default:
+    	default:
  		printf("Essa opção não está disponivel.\n");
  		system("pause");
  		break;
- } //fim da seleção
-}
+ 
+     } //fim da seleção
+     
+     }
+    }
+  
+  else 
+      printf ("Senha incorreta.");
+  
 }
